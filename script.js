@@ -1,17 +1,13 @@
 function getComputerChoice() {
   const choice = Math.floor(Math.random() * 3) + 1;
 
-  switch(choice) {
-
+  switch (choice) {
     case 1:
       return "rock";
-      break;
     case 2:
       return "paper";
-      break;
     case 3:
       return "scissors";
-      break;
     default:
       break;
   }
@@ -25,14 +21,18 @@ function getPlayerChoice() {
 
 function playRound(player, comp) {
   console.log(`Player choice: ${player}`);
-  console.log(`Comp choice: ${comp}`);  
+  console.log(`Comp choice: ${comp}`);
   if (player === comp) {
     return "Tie!";
-  } else if (player === "rock" && comp === "scissors" || player === "paper" && comp === "rock" || player === "scissors" && comp === "paper") {
-    return "Player wins!";
-  } else {
-    return "Computer wins!"
   }
+  if (
+    (player === "rock" && comp === "scissors") ||
+    (player === "paper" && comp === "rock") ||
+    (player === "scissors" && comp === "paper")
+  ) {
+    return "Player wins!";
+  }
+  return "Computer wins!";
 }
 
 function game() {
@@ -45,21 +45,21 @@ function game() {
     const result = playRound(playerChoice, compChoice);
     console.log(result);
 
-    if (result === 'Player wins!') {
-      playerScore++;
+    if (result === "Player wins!") {
+      playerScore += 1;
     } else if (result === "Computer wins!") {
-      compScore++;
+      compScore += 1;
     }
     console.log(`Player score: ${playerScore}, Computer Score: ${compScore}`);
   }
 
   if (playerScore > compScore) {
     return "Player wins!";
-  } else if (compScore > playerScore) {
-    return "Comp wins!"
-  } else {
-    return "It's a Tie!";
   }
+  if (compScore > playerScore) {
+    return "Comp wins!";
+  }
+  return "It's a Tie!";
 }
 
 const finalResult = game();
