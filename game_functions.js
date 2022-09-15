@@ -9,7 +9,7 @@ function getComputerChoice() {
     case 2:
       return "paper";
     default:
-      break;
+      return null;
   }
 }
 
@@ -34,7 +34,7 @@ export default function playGame(numRounds, playerChoice) {
   let playerScore = 0;
   let compScore = 0;
 
-  for (let i = 0; i < numRounds; i++) {
+  for (let i = 0; i < numRounds; i += 1) {
     const roundResult = playRound(playerChoice);
     if (roundResult === "Player scores!") {
       playerScore += 1;

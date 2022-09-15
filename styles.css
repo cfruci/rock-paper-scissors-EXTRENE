@@ -27,12 +27,12 @@ body {
   align-items: center;
 }
 
-.setup {
+.rounds-setup {
   display: none;
   margin: 10px;
 }
 
-.setup.active {
+.rounds-setup.active {
   display: block;
 }
 
@@ -40,11 +40,11 @@ body {
   width: 50px;
 }
 
-.current-game {
+.player-selection {
   display: none;
 }
 
-.current-game.active {
+.player-selection.active {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,17 +56,30 @@ body {
   align-items: center;
 }
 
-.player-selection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .game-stage {
   width: 500px;
   height: 300px;
-  border: rgb(109, 57, 57) solid 10px;
+  border-bottom: rgb(109, 57, 57) solid 10px;
   margin: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+img {
+  animation: alternate infinite float 1.5s;
+  width: 150px;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(20px);
+  }
 }
 
 table,
