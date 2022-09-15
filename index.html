@@ -10,12 +10,12 @@
 <body>
   <h1>Rock, Paper, Scissors: The Ultimate Game</h1>
 
-  <label for="rounds">Rounds</label>
+  <label for="rounds">Rounds: </label>
   <input type="number" name="rounds" id="rounds" placeholder="0">
   <button>Play Game</button>
 
   <form id="player-choice">
-    <h2>Player Selection</h2>
+    <h3>Player Selection</h3>
     
     <div class="options">
       <input type="radio" name="player-choice" id="Rock" value="rock">
@@ -26,19 +26,18 @@
       
       <input type="radio" name="player-choice" id="Scissors" value="scissors">
       <label for="Scissors">Scissors</label>
-
-      <button>Submit Choice</button>
     </div>
+    <button>Submit</button>
+
   </form>
 
   <div class="current-game">
-    <table>
-    </table>
+    <h2>Current Game Results</h2>
   </div>
 
   <div class="all-time">
+    <h2>All-time Results</h2>
     <table>
-      <th>All-time Score</th>
     </table>
   </div>
 
