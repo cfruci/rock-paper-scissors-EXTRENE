@@ -1,4 +1,4 @@
-// import {getComputerChoice, getPlayerChoice, playRound, playGame } from "./gameplay_functions.js";
+import playGame from "./game_functions";
 
 const setupBox = document.querySelector(".setup");
 const startBtn = document.querySelector(".start-game-btn");
@@ -18,4 +18,4 @@ choiceBtns.forEach((button) => {
   button.addEventListener("click", getPlayerChoice);
 });
 
-// const finalResult = game();
+const gameResult = playGame(numRounds, getPlayerChoice);
