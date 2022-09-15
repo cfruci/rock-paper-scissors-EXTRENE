@@ -40,7 +40,8 @@ body {
   width: 50px;
 }
 
-.current-game {
+.current-game, 
+.all-time-results {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,4 +58,9 @@ body {
   height: 300px;
   border: rgb(109, 57, 57) solid 10px;
   margin: 20px;
+}
+
+table,
+td {
+  border: black 1px solid;
 }
