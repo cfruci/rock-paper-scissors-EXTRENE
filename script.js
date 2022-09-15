@@ -1,4 +1,7 @@
-import {} from "/handlers.js";
+// import { numRounds } from "/handlers.js";
+import * as exports from "./handlers.js";
+
+let numRounds;
 
 function getComputerChoice() {
   const randNum = Math.floor(Math.random() * 3);
@@ -18,6 +21,10 @@ function getComputerChoice() {
 function getPlayerChoice() {
   const playerChoice = this.dataset.weapon;
   return playerChoice;
+}
+
+function getRounds() {
+  const roundsInput = document.querySelector("#rounds-input");
 }
 
 function playRound() {
@@ -40,6 +47,7 @@ function playRound() {
 function playGame(numRounds) {
   let playerScore = 0;
   let compScore = 0;
+  console.log(numRounds);
 
   for (let i = 0; i < numRounds; i += 1) {
     const roundResult = playRound();
@@ -59,10 +67,9 @@ function playGame(numRounds) {
   return "Match ends in draw!";
 }
 
-const choiceBtns = document.querySelectorAll(".choice-btn");
-choiceBtns.forEach((button) => {
+function activateButtons(button) {
   button.addEventListener("click", getPlayerChoice);
-});
+}
 
-const matchResult = playGame();
-console.log(matchResult);
+const choiceBtns = document.querySelectorAll(".choice-btn");
+choiceBtns.forEach(activateButtons);

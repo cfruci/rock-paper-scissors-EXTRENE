@@ -12,22 +12,22 @@
       <h1>Rock, Paper, Scissors: <span>Extreme</span></h1>
     </header>
     <main class="wrapper">
-      <button class="new-round-btn">New Round</button>
+      <button class="new-round-btn">New Match</button>
 
       <div class="rounds-setup">
         <label for="rounds">How many rounds?</label>
-        <input type="number" name="rounds" id="rounds" placeholder="0" style="width: 50px" />
+        <input type="number" name="rounds" id="rounds-input" placeholder="0" style="width: 50px" />
         <button class="begin-game-btn">Begin Match</button>
       </div>
 
       <div class="weapon-selection">
+        <button id="abort-btn">Abort Match</button>
         <h3>Choose Your Weapon</h3>
         <div class="choices">
           <button class="choice-btn" data-weapon="rock">Rock</button>
           <button class="choice-btn" data-weapon="paper">Paper</button>
           <button class="choice-btn" data-weapon="scissors">Scissors</button>
         </div>
-        <button id="abort-btn">Abort Match</button>
       </div>
 
       <div class="scoreboard">
