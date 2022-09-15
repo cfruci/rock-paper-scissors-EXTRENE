@@ -8,8 +8,10 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <div class="wrapper">
-      <h1>Rock, Paper, Scissors: Extreme</h1>
+    <header>
+      <h1>Rock, Paper, Scissors: <span>Extreme</span></h1>
+    </header>
+    <main class="wrapper">
       <button class="new-round-btn">New Round</button>
 
       <div class="rounds-setup">
@@ -28,8 +30,10 @@
       </div>
 
       <div class="game-stage">
-        <img src="/human.jpeg" alt="player ready to battle">
-        <img src="/robot.jpeg" alt="robot ready to battle">
+        <!-- image attributions -- OpenClipart-Vectors from Pixabay -->
+        <img src="./assets/Grandma.png" alt="player ready to battle">
+        <img src="./assets/spaceman.png" alt="robot ready to battle">
+        <!-- image attributions -- Tchekele (fist), Clker-Free-Vector-Images (scissors, paper) from Pixabay -->
       </div>
 
       <div class="all-time-results">
@@ -55,9 +59,9 @@
         </table>
       </div>
 
-    </div>
-    <!-- audio attribution -- "Stylish Intro Logo Youtube" from pixabay -->
-    <audio src="battle_prep.mp3" controls></audio>
+    </main>
+    <!-- audio attribution -- "War is Coming" from pixabay -->
+    <audio src="./assets/war-is-coming.mp3" autoplay loop></audio>
     <script type="module" src="script.js"></script>
   </body>
 </html>

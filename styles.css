@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
-  font-size: 12px;
-  background: #dccb7a;
+  font-size: 16px;
+  background: #80bcba;
 }
 
 *, *:before, *:after {
@@ -13,10 +13,21 @@ body {
 
   padding: 0;
   margin: 0;
+  height: 100vh;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-style: italic;
+}
+
+h1 span{
+  color: darkred;
 }
 
 .wrapper {
@@ -59,7 +70,7 @@ body {
 .game-stage {
   width: 500px;
   height: 300px;
-  border-bottom: rgb(109, 57, 57) solid 10px;
+  border-bottom: rgb(8, 28, 69) solid 20px;
   margin: 20px;
 
   display: flex;
@@ -85,4 +96,9 @@ img {
 table,
 td {
   border: black 1px solid;
+}
+
+td {
+  min-width: 10px;
+  padding: 5px;
 }
