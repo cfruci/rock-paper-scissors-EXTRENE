@@ -16,23 +16,29 @@
 
       <div class="rounds-setup">
         <label for="rounds">How many rounds?</label>
-        <input type="number" name="rounds" id="rounds" placeholder="0" />
-        <button class="begin-game-btn">Begin</button>
+        <input type="number" name="rounds" id="rounds" placeholder="0" style="width: 50px" />
+        <button class="begin-game-btn">Begin Match</button>
       </div>
 
-      <div class="player-selection">
+      <div class="weapon-selection">
         <h3>Choose Your Weapon</h3>
         <div class="choices">
           <button class="choice-btn" data-weapon="rock">Rock</button>
           <button class="choice-btn" data-weapon="paper">Paper</button>
           <button class="choice-btn" data-weapon="scissors">Scissors</button>
         </div>
+        <button id="abort-btn">Abort Match</button>
+      </div>
+
+      <div class="scoreboard">
+        <div class="player-score">Player Score: 0</div>
+        <div class="computer-score">Comp Score: </div>
       </div>
 
       <div class="game-stage">
         <!-- image attributions -- OpenClipart-Vectors from Pixabay -->
-        <img src="./assets/Grandma.png" alt="player ready to battle">
-        <img src="./assets/spaceman.png" alt="robot ready to battle">
+        <img id="player-icon" src="./assets/Grandma.png" alt="player ready to battle">
+        <img id="computer-icon" src="./assets/spaceman.png" alt="robot ready to battle">
         <!-- image attributions -- Tchekele (fist), Clker-Free-Vector-Images (scissors, paper) from Pixabay -->
       </div>
 
@@ -61,7 +67,7 @@
 
     </main>
     <!-- audio attribution -- "War is Coming" from pixabay -->
-    <audio src="./assets/war-is-coming.mp3" autoplay loop></audio>
+    <!-- <audio src="./assets/war-is-coming.mp3" autoplay loop></audio> -->
     <script type="module" src="script.js"></script>
   </body>
 </html>

@@ -1,25 +1,34 @@
 // new round
 const newRoundBtn = document.querySelector(".new-round-btn");
+const abortBtn = document.querySelector("#abort-btn");
 newRoundBtn.addEventListener("click", initiateSetup);
 
 // initialize round
 const roundsSetup = document.querySelector(".rounds-setup");
-const numRounds = document.querySelector("#rounds").value;
+const roundsInput = document.querySelector("#rounds");
 const beginBtn = document.querySelector(".begin-game-btn");
-
-// in-game choices
-const choiceBtns = document.querySelectorAll(".choice-btn");
-choiceBtns.forEach((button) => {
-  button.addEventListener("click", getPlayerChoice);
-});
+// const playerIcon = document.querySelector("#player-icon");
+// const computerIcon = document.querySelector("#computer-icon");
 
 function initiateSetup() {
   roundsSetup.classList.toggle("active");
+  newRoundBtn.style.display = "None";
+  const numRounds = roundsInput.value;
+  return numRounds;
 }
 
-function getPlayerChoice(event) {
-  const playerChoice = event.target.dataset.weapon;
-  return playerChoice;
+function movePlayers(player, comp) {
+  player.classList.add = "active";
 }
 
-export { numRounds, getPlayerChoice, beginBtn };
+beginBtn.addEventListener("click", displayGame);
+
+function displayGame() {
+  // movePlayers();
+  // displayFists();
+  // showScoreBoard();
+}
+
+// function movePlayers() {}
+
+export { initiateSetup };
