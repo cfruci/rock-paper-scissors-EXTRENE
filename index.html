@@ -8,42 +8,34 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <h1>Rock, Paper, Scissors: The Ultimate Game</h1>
+    <div class="wrapper">
+      <h1>Rock, Paper, Scissors: The Ultimate Game</h1>
+      <button>New Game</button>
 
-    <label for="rounds">Rounds: </label>
-    <input type="number" name="rounds" id="rounds" placeholder="0" />
-    <button>Play Game</button>
-
-    <form id="player-choice">
-      <h3>Player Selection</h3>
-
-      <div class="options">
-        <input type="radio" name="player-choice" id="Rock" value="rock" />
-        <label for="Rock">Rock</label>
-
-        <input type="radio" name="player-choice" id="Paper" value="raper" />
-        <label for="Paper">Paper</label>
-
-        <input
-          type="radio"
-          name="player-choice"
-          id="Scissors"
-          value="scissors"
-        />
-        <label for="Scissors">Scissors</label>
+      <div class="new-game">
+        <label for="rounds"># of Rounds:</label>
+        <input type="number" name="rounds" id="rounds" placeholder="0" />
       </div>
-      <button>Submit</button>
-    </form>
 
-    <div class="current-game">
-      <h2>Current Game Results</h2>
+      <div class="current-game">
+        <div class="player-selection">
+          <h3>Choose Your Weapon</h3>
+          <div class="choices">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+          </div>
+        </div>
+        <canvas class="game-stage"></canvas>
+        <h2>Current Game Results</h2>
+      </div>
+
+      <div class="all-time-results">
+        <h2>All-time Results</h2>
+        <table></table>
+      </div>
+
     </div>
-
-    <div class="all-time">
-      <h2>All-time Results</h2>
-      <table></table>
-    </div>
-
     <script src="script.js"></script>
   </body>
 </html>

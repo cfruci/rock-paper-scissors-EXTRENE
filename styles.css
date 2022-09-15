@@ -1,4 +1,60 @@
+html {
+  box-sizing: border-box;
+  font-size: 12px;
+  background: #dccb7a;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  background: rgb(221, 212, 212);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
   width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-game {
+  display: none;
+}
+
+.new-game .active {
+  display: block;
+  background: gray;
+}
+
+#rounds {
+  width: 50px;
+}
+
+.current-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-stage {
+  width: 500px;
+  height: 300px;
+  border: rgb(109, 57, 57) solid 10px;
+  margin: 20px;
 }
