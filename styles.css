@@ -27,20 +27,29 @@ body {
   align-items: center;
 }
 
-.new-game {
+.setup {
   display: none;
+  margin: 10px;
 }
 
-.new-game .active {
+.setup.active {
   display: block;
-  background: gray;
 }
 
 #rounds {
   width: 50px;
 }
 
-.current-game, 
+.current-game {
+  display: none;
+}
+
+.current-game.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .all-time-results {
   display: flex;
   flex-direction: column;

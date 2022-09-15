@@ -1,3 +1,21 @@
+const setupBox = document.querySelector(".setup");
+const startBtn = document.querySelector(".start-game-btn");
+const currentGame = document.querySelector(".current-game");
+startBtn.addEventListener("click", playRound);
+
+const newGameBtn = document.querySelector(".new-game-btn");
+newGameBtn.addEventListener("click", initiateSetup);
+
+function initiateSetup() {
+  setupBox.classList.toggle("active");
+  // newGameBtn.style.display = "None";
+}
+
+const choiceBtns = document.querySelectorAll(".choice-btn");
+choiceBtns.forEach((button) => {
+  button.addEventListener("click", getPlayerChoice);
+});
+
 function getComputerChoice() {
   const choice = Math.floor(Math.random() * 3) + 1;
 
@@ -13,13 +31,13 @@ function getComputerChoice() {
   }
 }
 
-function getPlayerChoice() {
-  // const playerChoice = prompt("Rock, Paper, or Scissors? ");
-  const playerChoiceClean = playerChoice.toLowerCase();
-  return playerChoiceClean;
+function getPlayerChoice(event) {
+  return event.target.dataset.weapon;
 }
 
 function playRound(player, comp) {
+  currentGame.classList.toggle("active");
+  
   console.log(`Player choice: ${player}`);
   console.log(`Comp choice: ${comp}`);
   if (player === comp) {
@@ -53,6 +71,8 @@ function game() {
     console.log(`Player score: ${playerScore}, Computer Score: ${compScore}`);
   }
 
+  // newGameBtn.style.display = "Block";
+
   if (playerScore > compScore) {
     return "Player wins!";
   }
@@ -62,5 +82,4 @@ function game() {
   return "It's a Tie!";
 }
 
-const finalResult = game();
-console.log(finalResult);
+// const finalResult = game();

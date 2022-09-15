@@ -10,20 +10,21 @@
   <body>
     <div class="wrapper">
       <h1>Rock, Paper, Scissors: The Ultimate Game</h1>
-      <button>New Game</button>
+      <button class="new-game-btn">New Game</button>
 
-      <div class="new-game">
-        <label for="rounds"># of Rounds:</label>
+      <div class="setup">
+        <label for="rounds">How many rounds?</label>
         <input type="number" name="rounds" id="rounds" placeholder="0" />
+        <button class="start-game-btn">Begin</button>
       </div>
 
       <div class="current-game">
         <div class="player-selection">
           <h3>Choose Your Weapon</h3>
           <div class="choices">
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissors">Scissors</button>
+            <button class="choice-btn" data-weapon="rock">Rock</button>
+            <button class="choice-btn" data-weapon="paper">Paper</button>
+            <button class="choice-btn" data-weapon="scissors">Scissors</button>
           </div>
         </div>
         <canvas class="game-stage"></canvas>
