@@ -1,0 +1,9 @@
+body {
+  background: rgb(221, 212, 212);
+  width: 1200px;
+}
+
+.options {
+  display: flex;
+  /* flex-direction: column; */
+}

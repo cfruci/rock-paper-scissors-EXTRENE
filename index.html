@@ -4,10 +4,44 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Rock Paper Scissors</title>
 </head>
 <body>
-  
+  <h1>Rock, Paper, Scissors: The Ultimate Game</h1>
+
+  <label for="rounds">Rounds</label>
+  <input type="number" name="rounds" id="rounds" placeholder="0">
+  <button>Play Game</button>
+
+  <form id="player-choice">
+    <h2>Player Selection</h2>
+    
+    <div class="options">
+      <input type="radio" name="player-choice" id="Rock" value="rock">
+      <label for="Rock">Rock</label>
+
+      <input type="radio" name="player-choice" id="Paper" value="raper">
+      <label for="Paper">Paper</label>
+      
+      <input type="radio" name="player-choice" id="Scissors" value="scissors">
+      <label for="Scissors">Scissors</label>
+
+      <button>Submit Choice</button>
+    </div>
+  </form>
+
+  <div class="current-game">
+    <table>
+    </table>
+  </div>
+
+  <div class="all-time">
+    <table>
+      <th>All-time Score</th>
+    </table>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
