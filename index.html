@@ -16,22 +16,33 @@
     <main class="wrapper">
       <div class="match-setup">
         <form class="match-options">
-          <label for="rounds">How many rounds?</label>
-          <input type="number" name="rounds" id="rounds-input" placeholder="0" style="width: 50px" />
-
-          <label for="player-fighter">Choose fighter</label>
-          <select name="player-fighter" id="player-fighter">
-            <option value="grandma">Grandma</option>
-            <option value="Warrior">Warrior</option>
-            <option value="snake">Snake</option>
-          </select>
-
+          <div class="rounds">
+            <label for="rounds">How many rounds?</label>
+            <input type="number" name="rounds" id="rounds-input" placeholder="0" style="width: 50px" />
+          </div>
+          <div class="player-fighter">
+            <label for="player-fighter">Choose player fighter</label>
+            <select name="player-fighter" id="player-fighter">
+              <option value=""></option>
+              <option value="grandma">Grandma</option>
+              <option value="warrior">Warrior</option>
+              <option value="snake">Snake</option>
+            </select>
+          </div>
+          <div class="computer-fighter">
+            <label for="computer-fighter">Choose computer fighter</label>
+            <select name="computer-fighter" id="computer-fighter">
+              <option value=""></option>
+              <option value="spaceman">Spaceman</option>
+              <option value="warrior">Warrior</option>
+              <option value="snake">Snake</option>
+            </select>
+          </div>
           <button class="begin-game-btn">Begin Match</button>
         </form>
       </div>
 
       <div class="weapon-selection">
-        <button id="abort-btn">Abort Match</button>
         <h3>Choose Your Weapon</h3>
         <div class="choices">
           <button class="choice-btn" data-weapon="rock">Rock</button>
@@ -50,6 +61,7 @@
           <!-- image attributions -- Tchekele (fist), Clker-Free-Vector-Images (scissors, paper) from Pixabay -->
         </div>
       </div>
+      <button class="abort-btn">Abort Match</button>
 
       <div class="all-time-results">
         <h2>All-time Results</h2>
