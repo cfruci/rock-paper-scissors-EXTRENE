@@ -22,6 +22,13 @@ body {
 }
 
 /* header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
 h1 {
   font-size: 3rem;
   font-style: italic;
@@ -32,8 +39,8 @@ h1 span{
 }
 
 /* main */
-.wrapper {
-  width: 1200px;
+.main {
+  min-width: 600px;
 }
 
 .wrapper,
@@ -44,52 +51,77 @@ h1 span{
   align-items: center;
 }
 
-.rounds-setup {
+/* setup */
+.match-setup {
   display: none;
 }
 
-.rounds-setup.active {
+.match-setup.active {
   display: block;
+}
+
+.match-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .weapon-selection {
   display: none;
 }
 
-.scoreboard {
- display: none;
-}
-
-.scoreboard.active {
-  display: block;
-}
-
+/* game stage */
 .game-stage {
   width: 500px;
   height: 300px;
   border-bottom: rgb(8, 28, 69) solid 20px;
   margin: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 
-img {
+.game-assets {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: 
+    "player computer"
+    "player-avatar comp-avatar"
+}
+
+.player-score {
+  grid-area: player;
+}
+
+.computer-score {
+  grid-area: computer;
+}
+
+#player-avatar {
+  grid-area: player-avatar;
+}
+
+#computer-avatar {
+  grid-area: comp-avatar;
+}
+
+#player-avatar,
+#computer-avatar {
   animation: alternate infinite float 1.5s;
   width: 125px;
 }
 
 @keyframes float {
   from {
-    transform: translateY(0px);
+    transform: translateY(-20px);
   }
 
   to {
-    transform: translateY(20px);
+    transform: translateY(-5px);
   }
 }
 
+/* all-time results */
 table,
 td {
   border: black 1px solid;
